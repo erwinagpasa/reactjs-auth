@@ -1,11 +1,13 @@
-import React, { Component } from 'react';
-import fire from './config/Fire';
-import Login from './Login';
-import Home from './Home';
-import './App.css';
+import React, { Component } from "react";
+import fire from "./config/Fire";
+import Login from "./Login";
+import Home from "./Home";
+import Nav from "./Nav";
+import About from "./About";
+import Shop from "./Shop";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-
-
+import "./App.css";
 
 class App extends Component {
   constructor(props) {
@@ -30,11 +32,32 @@ class App extends Component {
   }
 
   render() {
-  //if the user is not logedin show the sginup page else home
-  return <div className="App">
+    //if the user is not logedin show the sginup page else home
+    /* return <div className="App">
     {this.state.user ? (<Home/>) : (<Login/>) }
     </div>;
+  */
+
+    return (
+      <Router>
+        <div>
+        <Nav />
+        {this.state.user ? (
+                <Switch>
+                <Route path="/" exact component ={Home} />
+                <Route path="/about" component ={About} />
+                <Route path="/shop" component ={Shop} />
+                </Switch>
+        
+        ) : (<Login/>) }
+
+
+      </div>
+      </Router>
+
+    );
   }
 }
+
 
 export default App;
