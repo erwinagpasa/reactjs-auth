@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import fire from "./config/Fire";
-import Login from "./Login";
-import Home from "./Home";
-import Nav from "./Nav";
-import About from "./About";
-import Shop from "./Shop";
+import Login from "./components/Login";
+import Home from "./components/Home";
+import Nav from "./components/Nav";
+import About from "./components/About";
+import Shop from "./components/Shop";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import "./App.css";

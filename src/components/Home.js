@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import fire from "./config/Fire";
+import fire from "../config/Fire";
 import { Link } from "react-router-dom";
 
 class Home extends Component {
