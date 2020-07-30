@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import fire from "./config/Fire";
+import fire from "../config/Fire";
 
 class Login extends Component {
   constructor(props) {
@@ -41,7 +41,7 @@ class Login extends Component {
 
   render() {
     return (
-      <div class="col-md-6">
+      <div class="col-md-4 mt-5 mx-auto">
         <form>
           <div class="form-group">
             <label for="exampleInputEmail1">Email address</label>
